@@ -1,4 +1,4 @@
-/* Campus Notice Copilot - Floating Panel Styles */
+/* Campus Notice Copilot - Personalized Antigravity Edition */
 #cnc-fab-btn {
   position: fixed;
   right: 18px;
@@ -6,7 +6,7 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1A73E8, #34A853);
+  background: linear-gradient(135deg, #1A73E8, #9333EA);
   color: white;
   border: none;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
@@ -16,12 +16,11 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #cnc-fab-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 #cnc-badge-count {
@@ -40,8 +39,8 @@
 #cnc-drawer {
   position: fixed;
   top: 0;
-  right: -420px;
-  width: 390px;
+  right: -430px;
+  width: 400px;
   height: 100vh;
   background: #ffffff;
   box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
@@ -49,7 +48,7 @@
   display: flex;
   flex-direction: column;
   transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #202124;
 }
 
@@ -58,8 +57,8 @@
 }
 
 .cnc-header {
-  padding: 18px 20px;
-  background: linear-gradient(135deg, #1A73E8, #1557B0);
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #1A73E8, #6366F1);
   color: white;
   display: flex;
   align-items: center;
@@ -68,52 +67,64 @@
 
 .cnc-header h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
+}
+
+.cnc-sync-bar {
+  padding: 10px 14px;
+  background: #EEF2FF;
+  border-bottom: 1px solid #E0E7FF;
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
-.cnc-close-btn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
+.cnc-sync-btn {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #C7D2FE;
+  background: white;
+  color: #4338CA;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.cnc-sync-btn:hover {
+  background: #E0E7FF;
 }
 
 .cnc-controls {
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-bottom: 1px solid #E8EAED;
   background: #F8F9FA;
 }
 
 .cnc-search-input {
   width: 100%;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 7px 10px;
+  border-radius: 6px;
   border: 1px solid #DADCE0;
-  font-size: 13px;
+  font-size: 12px;
   box-sizing: border-box;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   outline: none;
-}
-
-.cnc-search-input:focus {
-  border-color: #1A73E8;
 }
 
 .cnc-filter-pills {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   overflow-x: auto;
-  padding-bottom: 2px;
 }
 
 .cnc-pill {
-  padding: 4px 10px;
-  font-size: 11px;
+  padding: 3px 8px;
+  font-size: 10.5px;
   font-weight: 500;
   border-radius: 12px;
   border: 1px solid #DADCE0;
@@ -131,31 +142,25 @@
 .cnc-notices-list {
   flex: 1;
   overflow-y: auto;
-  padding: 14px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.cnc-empty-state {
-  text-align: center;
-  color: #5F6368;
-  padding: 40px 20px;
-  font-size: 13px;
+  gap: 10px;
 }
 
 .cnc-card {
   background: #FFFFFF;
   border: 1px solid #E8EAED;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   border-left: 4px solid #1A73E8;
 }
 
+.cnc-card.mention { border-left-color: #9333EA; background: #FAF5FF; }
 .cnc-card.exam { border-left-color: #EA4335; }
 .cnc-card.circular { border-left-color: #34A853; }
 .cnc-card.assignment { border-left-color: #FBBC04; }
@@ -164,18 +169,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
+  font-size: 10.5px;
   color: #5F6368;
 }
 
 .cnc-tag {
-  font-weight: 600;
-  padding: 2px 6px;
+  font-weight: 700;
+  padding: 1px 5px;
   border-radius: 4px;
-  font-size: 10px;
+  font-size: 9.5px;
   text-transform: uppercase;
 }
 
+.cnc-tag.mention { background: #F3E8FF; color: #7E22CE; }
 .cnc-tag.exam { background: #FCE8E6; color: #C5221F; }
 .cnc-tag.circular { background: #E6F4EA; color: #137333; }
 .cnc-tag.assignment { background: #FEF7E0; color: #B06000; }
@@ -183,44 +189,40 @@
 .cnc-card-chat {
   font-weight: 600;
   color: #202124;
-  font-size: 12px;
+  font-size: 11.5px;
 }
 
 .cnc-card-text {
-  font-size: 12.5px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.4;
   color: #3C4043;
   word-break: break-word;
 }
 
 .cnc-card-actions {
   display: flex;
-  gap: 8px;
-  margin-top: 6px;
-  padding-top: 6px;
+  gap: 6px;
+  margin-top: 4px;
+  padding-top: 4px;
   border-top: 1px solid #F1F3F4;
 }
 
 .cnc-btn-sm {
-  padding: 4px 8px;
-  font-size: 11px;
-  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 10.5px;
+  border-radius: 4px;
   border: 1px solid #DADCE0;
   background: #F8F9FA;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   color: #3C4043;
   text-decoration: none;
 }
 
-.cnc-btn-sm:hover {
-  background: #E8EAED;
-}
-
 .cnc-footer {
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-top: 1px solid #E8EAED;
   background: #F8F9FA;
   display: flex;
@@ -229,9 +231,9 @@
 }
 
 .cnc-footer-btn {
-  padding: 6px 12px;
-  font-size: 12px;
-  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 11.5px;
+  border-radius: 5px;
   border: 1px solid #DADCE0;
   background: white;
   cursor: pointer;
